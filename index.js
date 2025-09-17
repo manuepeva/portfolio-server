@@ -7,14 +7,17 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({
+
+const corsOptions = {
   origin: [
-    "http://localhost:4000", 
-    "https://portfolio-server-beta-taupe.vercel.app"
+    "http://localhost:3000",
+    "https://portfolio-server-hddu.onrender.com"
   ],
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-}));
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 // Ruta del formulario
 app.post("/contact", async (req, res) => {
