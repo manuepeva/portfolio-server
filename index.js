@@ -11,10 +11,9 @@ app.use(express.json());
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://portfolio-server-akgka9mds-manuel-prez-s-projects.vercel.app",
     "https://portolio-react-redux-ui.vercel.app",
+    "https://portolio-react-redux-80650y0g6-manuel-prez-s-projects.vercel.app",
     "https://portfolio-server-hddu.onrender.com",
-    "https://portfolio-server-7uo36pjh3-manuel-prez-s-projects.vercel.app"
   ],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
